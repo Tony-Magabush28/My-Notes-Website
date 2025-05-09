@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Add Note{% endblock %}
+{% block content %}
+<h2>Add a Note</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.content.label }} {{ form.content(class="form-control", rows="4") }}
+    </div>
+    {{ form.submit(class="btn btn-success") }}
+</form>
+{% endblock %}

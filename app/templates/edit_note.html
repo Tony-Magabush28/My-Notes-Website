@@ -1,0 +1,12 @@
+<!-- templates/edit_note.html -->
+{% extends "base.html" %}
+{% block content %}
+  <h2>Edit Note</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.content.label }}<br>
+    {{ form.content(rows=5) }}<br><br>
+    <button type="submit">Update</button>
+  </form>
+  <a href="{{ url_for('dashboard') }}">Back</a>
+{% endblock %}
